@@ -1,2 +1,0 @@
-# ProyectoFase2
-Equisde
