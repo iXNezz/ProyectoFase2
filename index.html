@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucaramanga en el Límite — Fase 2</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <a class="brand" href="#inicio">Bucaramanga<span>∞</span></a>
+      <div class="nav-links">
+        <a href="#continuidad">Continuidad</a>
+        <a href="#racional">Análisis finito</a>
+        <a href="#asintotico">Análisis asintótico</a>
+        <a href="#conclusiones">Conclusiones</a>
+      </div>
+      <button class="menu-btn" type="button" aria-label="Abrir menú">☰</button>
+    </nav>
+
+    <div class="hero-content reveal">
+      <p class="eyebrow">PROYECTO CÁLCULO DIFERENCIAL · FASE 2</p>
+      <div class="team-badge"><strong>D192</strong><span>Daniel Ruiz · Nikol Quintero · Brayam Saavedra · Joel Arias</span></div>
+      <h1>Previendo el<br><em>futuro</em> de Bucaramanga.</h1>
+      <p class="hero-text">
+        Un blog interactivo para descubrir cómo los límites y la continuidad
+        ayudan a interpretar fenómenos ambientales y de sostenibilidad.
+      </p>
+      <a class="primary-btn" href="#continuidad">Comenzar exploración <span>↓</span></a>
+    </div>
+
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="orbit orbit-a"></div>
+      <div class="orbit orbit-b"></div>
+      <div class="orbit-dot"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro section reveal">
+      <div>
+        <p class="eyebrow">EL DESAFÍO</p>
+        <h2>Del fenómeno real<br>al modelo matemático.</h2>
+      </div>
+      <p>
+        Como jóvenes científicos de datos y analistas ambientales, estudiamos
+        situaciones de Bucaramanga mediante funciones, límites y continuidad.
+        La meta no es solo calcular: es entender qué significan los resultados
+        para nuestro entorno y convertirlos en información útil para la comunidad.
+      </p>
+    </section>
+
+    <section class="section" id="continuidad">
+      <div class="section-heading reveal">
+        <span class="number">01</span>
+        <div>
+          <p class="eyebrow">TENDENCIAS Y CONTINUIDAD</p>
+          <h2>¿Cuándo una función<br><em>es continua?</em></h2>
+        </div>
+      </div>
+
+      <div class="continuity-grid">
+        <article class="formula-card reveal">
+          <span class="card-tag">LOS 3 CRITERIOS</span>
+          <h3>Para que <span>f(x)</span> sea continua en <span>x = a</span>:</h3>
+          <div class="criteria">
+            <button class="criterion active" data-criterion="1" type="button">
+              <b>01</b><span>f(a) existe</span><i>→</i>
+            </button>
+            <button class="criterion" data-criterion="2" type="button">
+              <b>02</b><span>Existe el límite</span><i>→</i>
+            </button>
+            <button class="criterion" data-criterion="3" type="button">
+              <b>03</b><span>lim f(x) = f(a)</span><i>→</i>
+            </button>
+          </div>
+          <div class="criterion-explanation" id="criterionExplanation">
+            El valor de la función debe estar definido exactamente en el punto que estamos analizando.
+          </div>
+        </article>
+
+        <div class="continuity-visual reveal">
+          <div class="visual-label">IDEA CENTRAL</div>
+          <div class="road">
+            <div class="road-line"></div>
+            <div class="point-label">a</div>
+            <div class="road-point"></div>
+          </div>
+          <p>Si podemos recorrer la gráfica sin levantar el lápiz en <strong>a</strong>, la función es continua allí.</p>
+        </div>
+      </div>
+
+      <div class="discontinuities">
+        <div class="mini-heading reveal">
+          <p class="eyebrow">CUANDO ALGO SE INTERRUMPE</p>
+          <h3>Tres formas de discontinuidad</h3>
+        </div>
+
+        <div class="type-grid">
+          <article class="type-card reveal" data-type="removable">
+            <div class="chart" id="chart-removable"></div>
+            <div class="type-body">
+              <span class="pill">EVITABLE</span>
+              <h4>Discontinuidad removible</h4>
+              <p>El límite existe, pero el valor de la función está ausente o no coincide con él.</p>
+              <button type="button" class="text-btn chart-detail" data-detail="removable">Ver explicación →</button>
+            </div>
+          </article>
+
+          <article class="type-card reveal" data-type="jump">
+            <div class="chart" id="chart-jump"></div>
+            <div class="type-body">
+              <span class="pill">INEVITABLE</span>
+              <h4>Discontinuidad de salto</h4>
+              <p>Los límites laterales existen, pero son diferentes.</p>
+              <button type="button" class="text-btn chart-detail" data-detail="jump">Ver explicación →</button>
+            </div>
+          </article>
+
+          <article class="type-card reveal" data-type="infinite">
+            <div class="chart" id="chart-infinite"></div>
+            <div class="type-body">
+              <span class="pill">INFINITA</span>
+              <h4>Discontinuidad infinita</h4>
+              <p>La función crece sin límite cerca de un punto: aparece una asíntota vertical.</p>
+              <button type="button" class="text-btn chart-detail" data-detail="infinite">Ver explicación →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="racional">
+      <div class="section-heading reveal">
+        <span class="number">02</span>
+        <div>
+          <p class="eyebrow">ANÁLISIS FINITO</p>
+          <h2>Cuando una fórmula<br><em>se indetermina.</em></h2>
+        </div>
+      </div>
+
+      <div class="case-intro reveal">
+        <div class="case-number">CASO 01</div>
+        <div>
+          <h3>Calidad del aire y movilidad sostenible</h3>
+          <p>
+            En el Día Metropolitano Sin Carro y Sin Moto de 2023, Bucaramanga registró
+            <strong>13,35 µg/m³</strong> de PM2.5 en un día análogo y <strong>10,3 µg/m³</strong> durante la jornada.
+            Usaremos esos datos para construir un modelo didáctico de la diferencia observada.
+          </p>
+          <div class="case-source-box">
+            <div><strong>¿Por qué elegimos una función racional?</strong><br>
+            Porque la Fase 2 pide estudiar una indeterminación del tipo <strong>0/0</strong>. Construimos una función que conserva la diferencia real de PM2.5, pero que al sustituir el punto crítico produce 0/0 y nos permite resolver el límite mediante simplificación.</div>
+            <div><strong>¿De dónde salen los datos?</strong><br>
+            Del <strong>Área Metropolitana de Bucaramanga (AMB)</strong>, que reportó 13,35 µg/m³ en el día análogo y 10,3 µg/m³ en la jornada de 2023, equivalente a una disminución del 23 %.
+            <br><a href="https://www.amb.gov.co/asi-nos-fue-en-la-jornada-del-dia-metropolitano-sin-carro-y-sin-moto/" target="_blank" rel="noopener">Consultar fuente oficial del AMB →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="math-workspace">
+        <div class="math-card reveal">
+          <span class="card-tag">FUNCIÓN 1</span>
+          <div class="big-formula">f(x) = <span>((13,35 − 10,3)x)</span> / <span>x</span></div>
+          <p class="muted">Punto crítico: x = 0</p>
+          <div class="calc-row">
+            <label for="rationalX">Explora un factor x</label>
+            <input id="rationalX" type="number" value="0" step="0.1">
+          </div>
+          <div class="result-box" id="rationalResult" aria-live="polite"></div>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step active">
+            <span>01</span>
+            <div><h4>Sustitución directa</h4><p>Al evaluar x = 0 obtenemos:</p><strong>0 / 0 → indeterminación</strong></div>
+          </div>
+          <div class="step">
+            <span>02</span>
+            <div><h4>Simplificación</h4><p>La diferencia observada es 13,35 − 10,3 = 3,05:</p><strong>(3,05)x</strong></div>
+          </div>
+          <div class="step">
+            <span>03</span>
+            <div><h4>Cancelación</h4><p>Para x ≠ 0, podemos cancelar x:</p><strong>f(x) = 3,05</strong></div>
+          </div>
+          <div class="step final-step">
+            <span>04</span>
+            <div><h4>Límite</h4><p>Al acercarnos a x = 0:</p><strong>lim f(x) = 3,05 µg/m³</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="graph-panel reveal">
+        <div class="graph-title">
+          <div><span class="card-tag">GRÁFICA INTERACTIVA</span><h3>La diferencia observada se mantiene en 3,05 µg/m³</h3></div>
+          <div class="legend"><span class="dot filled"></span> f(x) = 3,05 <span class="dot hole"></span> indeterminación en x = 0</div>
+        </div>
+        <div class="svg-chart" id="rationalChart"></div>
+        <p class="graph-caption">
+          Los datos reales muestran una diferencia de <strong>3,05 µg/m³</strong> entre el día análogo
+          y el Día Sin Carro y Moto en Bucaramanga. La función se indetermina en x = 0 porque no
+          se puede dividir entre cero; al simplificar, el límite revela que la diferencia modelada
+          permanece en 3,05 µg/m³.
+        </p>
+        <p class="graph-caption"><small>Datos de referencia: AMB, Día Metropolitano Sin Carro y Sin Moto 2023. El modelo racional es una construcción didáctica a partir de esos valores.</small></p>
+      </div>
+    </section>
+
+    <section class="section" id="asintotico">
+      <div class="section-heading reveal">
+        <span class="number">03</span>
+        <div>
+          <p class="eyebrow">ANÁLISIS ASINTÓTICO</p>
+          <h2>Mirar hacia el<br><em>largo plazo.</em></h2>
+        </div>
+      </div>
+
+      <div class="case-intro light reveal">
+        <div class="case-number">CASO 02</div>
+        <div>
+          <h3>Residuos enviados a disposición final</h3>
+          <p>
+            En 2024, la gestión de residuos en <strong>El Carrasco</strong> fue un problema importante para Bucaramanga y su área metropolitana.
+            Tomamos como punto de partida <strong>82.425,53 toneladas</strong> y usamos una tasa de reducción del <strong>7 %</strong>
+            para construir una proyección matemática didáctica.
+          </p>
+          <div class="case-source-box light-box">
+            <div><strong>¿Por qué elegimos una función exponencial?</strong><br>
+            Porque queremos representar una <strong>reducción porcentual que se repite con el paso del tiempo</strong>. En una función exponencial, cada periodo conserva el mismo porcentaje de cambio; por eso es apropiada para estudiar tendencias de crecimiento o disminución.</div>
+            <div><strong>¿De dónde salen los datos?</strong><br>
+            La base se tomó de los <strong>informes de gestión de la Alcaldía de Bucaramanga</strong> sobre la disposición de residuos en El Carrasco y sus estrategias de reducción y aprovechamiento. La tasa del 7 % se usa aquí como supuesto de modelación, <strong>no como una predicción oficial</strong>.
+            <br><a href="https://www.bucaramanga.gov.co/wp-content/uploads/2025/03/INFORME-CONSOLIDADO-PRIMER-TRIMESTRE-2024.pdf" target="_blank" rel="noopener">Consultar informe oficial de gestión →</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exponential-layout">
+        <div class="expo-card reveal">
+          <span class="card-tag">FUNCIÓN 2 · EXPONENCIAL</span>
+          <div class="big-formula">R(t) = 82.425,53(0,93)<sup>t</sup></div>
+          <div class="slider-wrap">
+            <div class="slider-label"><span>Años desde 2024</span><strong id="timeValue">0 años</strong></div>
+            <input id="timeSlider" type="range" min="0" max="10" value="0">
+          </div>
+          <div class="live-number"><span id="wasteValue">82.425,53</span><small> toneladas proyectadas</small></div>
+        </div>
+
+        <div class="limit-card reveal">
+          <p class="eyebrow">LÍMITE AL INFINITO</p>
+          <div class="limit-formula">lim<sub>t→∞</sub> R(t) = <strong>0</strong></div>
+          <p>
+            Como <strong>0,93<sup>t</sup> → 0</strong> cuando t aumenta, el modelo proyecta una reducción progresiva de los residuos enviados a disposición final.
+          </p>
+          <div class="asymptote-badge"><span></span> Asíntota horizontal: <strong>y = 0</strong></div>
+        </div>
+      </div>
+
+      <div class="graph-panel reveal">
+        <div class="graph-title">
+          <div><span class="card-tag">TENDENCIA</span><h3>¿Qué proyecta el modelo a largo plazo?</h3></div>
+        </div>
+        <div class="svg-chart" id="expoChart"></div>
+        <p class="graph-caption">
+          La curva desciende porque el modelo aplica una reducción del <strong>7 % en cada periodo</strong>.
+          Para una persona que no conoce matemáticas, la idea es sencilla: si se logra disminuir la cantidad de residuos que llega a disposición final año tras año,
+          la gráfica muestra una caída progresiva. La curva se acerca a <strong>0 toneladas</strong> sin llegar a tocarlo en el modelo; esa línea es la asíntota horizontal.
+          Esto no significa que Bucaramanga vaya a llegar realmente a cero residuos: es una proyección matemática que sirve para visualizar qué ocurriría si la reducción porcentual se mantuviera.
+        </p>
+        <p class="graph-caption"><small>Datos de referencia: informe de gestión municipal 2024. El 7 % se utiliza como tasa de reducción para una proyección matemática, no como predicción oficial.</small></p>
+      </div>
+    </section>
+
+    <section class="section action-section" id="conclusiones">
+      <div class="section-heading reveal">
+        <span class="number">04</span>
+        <div>
+          <p class="eyebrow">INTERPRETACIÓN AMBIENTAL</p>
+          <h2>Las matemáticas<br><em>también cuentan historias.</em></h2>
+        </div>
+      </div>
+
+      <div class="conclusion-grid">
+        <article class="conclusion reveal">
+          <span>01</span>
+          <h3>Continuidad</h3>
+          <p>Nos permite reconocer cuándo un modelo representa una evolución sin interrupciones y cuándo existe un cambio que debemos estudiar.</p>
+        </article>
+        <article class="conclusion reveal">
+          <span>02</span>
+          <h3>Límites</h3>
+          <p>Ayudan a describir el comportamiento de una variable cerca de un punto, incluso cuando la función presenta una indeterminación.</p>
+        </article>
+        <article class="conclusion reveal">
+          <span>03</span>
+          <h3>Asíntotas</h3>
+          <p>Permiten visualizar tendencias de largo plazo y reconocer niveles hacia los cuales un fenómeno puede aproximarse.</p>
+        </article>
+      </div>
+
+    <section class="sources-section" id="fuentes">
+      <div class="section-heading reveal">
+        <span class="number">05</span>
+        <div>
+          <p class="eyebrow">REFERENCIAS</p>
+          <h2>Fuentes de<br><em>información.</em></h2>
+        </div>
+      </div>
+
+      <div class="sources-grid">
+        <article class="source-card reveal">
+          <span class="card-tag">CASO 01 · CALIDAD DEL AIRE</span>
+          <h3>Área Metropolitana de Bucaramanga (AMB)</h3>
+          <p>Publicación oficial sobre los resultados del Día Metropolitano Sin Carro y Sin Moto de 2023. Allí se reportan para Bucaramanga <strong>10,3 µg/m³ de PM2.5</strong> durante la jornada frente a <strong>13,35 µg/m³</strong> en el día análogo.</p>
+          <a href="https://www.amb.gov.co/asi-nos-fue-en-la-jornada-del-dia-metropolitano-sin-carro-y-sin-moto/" target="_blank" rel="noopener">Ver fuente oficial del AMB →</a>
+        </article>
+
+        <article class="source-card reveal">
+          <span class="card-tag">CASO 02 · RESIDUOS</span>
+          <h3>Alcaldía de Bucaramanga · Informe de Gestión 2024</h3>
+          <p>Informe oficial utilizado como referencia para contextualizar la disposición de residuos sólidos en <strong>El Carrasco</strong> y la situación de su capacidad y manejo durante 2024.</p>
+          <a href="https://www.bucaramanga.gov.co/wp-content/uploads/2025/03/INFORME-CONSOLIDADO-PRIMER-TRIMESTRE-2024.pdf" target="_blank" rel="noopener">Ver informe oficial →</a>
+        </article>
+
+        <article class="source-card reveal">
+          <span class="card-tag">CONTEXTO · RESIDUOS</span>
+          <h3>Alcaldía de Bucaramanga · Gestión de residuos sólidos</h3>
+          <p>Publicación institucional sobre las estrategias para reducir la cantidad de residuos destinados al relleno sanitario El Carrasco y avanzar hacia alternativas de aprovechamiento.</p>
+          <a href="https://www.bucaramanga.gov.co/noticias/compromiso-del-alcalde-jaime-andres-beltran-con-la-gestion-de-residuos-solidos-en-bucaramanga/" target="_blank" rel="noopener">Ver publicación oficial →</a>
+        </article>
+      </div>
+
+      <p class="sources-note reveal"><strong>Nota metodológica:</strong> las funciones matemáticas mostradas en los Casos 01 y 02 son <strong>modelos didácticos construidos a partir de datos reales</strong>. No se presentan como ecuaciones oficiales de las entidades citadas. En el Caso 02, la tasa del 7 % es un supuesto utilizado para representar matemáticamente una reducción porcentual sostenida.</p>
+    </section>
+    </section>
+  </main>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+      <p class="eyebrow" id="modalTag">CONCEPTO</p>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
