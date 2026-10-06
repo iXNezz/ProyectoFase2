@@ -1,7 +1,3 @@
-# Bucaramanga en el Límite — Fase 2
-
-Blog interactivo de Cálculo Diferencial basado en las instrucciones de la Fase 2.
-
 ## Archivos
 - `index.html`: estructura y contenido.
 - `estilos.css`: diseño, responsive y animaciones.
