@@ -7,13 +7,6 @@ Blog interactivo de Cálculo Diferencial basado en las instrucciones de la Fase 
 - `estilos.css`: diseño, responsive y animaciones.
 - `script.js`: interacciones, gráficas SVG, calculadoras y modal.
 
-## Publicación en GitHub Pages
-1. Crea o abre un repositorio.
-2. Sube los tres archivos manteniendo sus nombres.
-3. Ve a Settings → Pages.
-4. Selecciona la rama `main` y la carpeta `/root`.
-5. Guarda y espera a que GitHub publique el sitio.
-
 ## Nota matemática
 La función racional utilizada como caso de estudio es:
 f(x) = (x² − 16)/(x − 4)
